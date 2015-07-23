@@ -70,18 +70,43 @@ header {
 }
 
 .image {
-	display: inline;
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 23%;
+	margin: 5px;
 }
 
 .image img {
-	width: 23%;
-	border-radius: 50%;
-	margin: 5px;
+	width: 100%;
+	border-radius: 10px;
 	border: 3px solid black;
 }
 
 .image img:hover {
 	cursor: pointer;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 96%;
+	border-radius: 10px;
+	border: 3px solid black;
+	z-index: 100;
+	background-color: rgba(7, 101, 151, 0.6);
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.overlay h3 {
+	margin: 10px;
+	text-align: center;
+}
+
+.overlay p {
+	margin: 20px;
 }
 
 footer {
