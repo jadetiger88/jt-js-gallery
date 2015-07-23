@@ -27,8 +27,8 @@ $(document).ready(function() {
 		$(this).siblings(".overlay").fadeIn(500);
 	});
 
-	$('.overlay').on('mouseleave', function() {
-		$(this).fadeOut(500);
+	$('img').on('mouseleave', function() {
+		$(this).siblings(".overlay").fadeOut(500);
 	});
 
 	return false; 
