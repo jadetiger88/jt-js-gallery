@@ -12,23 +12,23 @@ $(document).ready(function() {
 		var category = $(this).text().toLowerCase().replace(' ', '-');
 		$('#gallery img').each(function(){
 			if (category == "all-projects") {
-				$(this).parent().fadeIn('slow');
+				$(this).parent().parent().fadeIn('slow');
 			} else {
 				if ($(this).hasClass(category)) {
-					$(this).parent().fadeIn('slow');
+					$(this).parent().parent().fadeIn('slow');
 				} else {
-					$(this).parent().hide();
+					$(this).parent().parent().hide();
 				}
 			}
 		});
 	});
 
-	$('img').on('mouseenter', function() {
-		$(this).siblings(".overlay").fadeIn(500);
+	$('a img').on('mouseenter', function() {
+		$(this).parent().siblings(".overlay").fadeIn(500);
 	});
 
-	$('img').on('mouseleave', function() {
-		$(this).siblings(".overlay").fadeOut(500);
+	$('a img').on('mouseleave', function() {
+		$(this).parent().siblings(".overlay").fadeOut(500);
 	});
 
 	return false; 
